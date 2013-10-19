@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+require 'pathname'
+bin_file = Pathname.new(__FILE__).realpath
+$:.unshift File.expand_path('../../lib', bin_file)
+
+require 'baws'
+Baws::CLI.start(*ARGV)
